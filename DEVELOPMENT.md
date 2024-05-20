@@ -5,6 +5,7 @@ git clone --recursive https://github.com/fcwu/docker-ubuntu-vnc-desktop
 ```
 
 or, if you have already cloned it, get submodules contents :
+
 ```
 git submodule init; git submodule update
 ```
@@ -18,7 +19,7 @@ container, and test the changes:
 
 ```
 make clean
-FLAVOR=lxqt ARCH=amd64 IMAGE=ubuntu:18.04 make build
+FLAVOR=lxqt ARCH=amd64 IMAGE=ubuntu:24.04 make build
 make run
 ```
 
@@ -27,6 +28,7 @@ make run
 You may wish to work on the backend app. As the "make run" makes sure
 to mount the current dir contents under /src in the container, you can
 proceed as such (no compilation of the Python code):
+
 ```
 make shell
 supervisorctl -c /etc/supervisor/supervisord.conf stop web
